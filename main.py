@@ -1,11 +1,7 @@
-# This is a sample Python script.
+import telebot
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+bot = telebot.TeleBot('6584646972:AAHC4SPIU8eqizGDB73mMB9yCtMeOzCm500')
 
-
-print("nikivssa")
-
-print(1)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+@bot.message_handlers(commands=['start'])
+def main(message):
+    bot.send_message(message.chat.id, "Привет булочка Зубова приветствует тебя")
