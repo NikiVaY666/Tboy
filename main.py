@@ -7,7 +7,7 @@ bot = telebot.TeleBot("6584646972:AAHC4SPIU8eqizGDB73mMB9yCtMeOzCm500")
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id,
-                     f'Привет {message.from_user.first_name} {message.from_user.last_name}')
+                     f'Привет1 {message.from_user.first_name} {message.from_user.last_name}')
     markup = types.ReplyKeyboardMarkup()
     ##file = open('./clip_image002.jpg', "rb")
     bot.send_photo(message.chat.id, file, reply_markup=markup)
