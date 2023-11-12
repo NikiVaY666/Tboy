@@ -9,8 +9,8 @@ def start(message):
     bot.send_message(message.chat.id,
                      f'Привет1 {message.from_user.first_name} {message.from_user.last_name}')
     markup = types.ReplyKeyboardMarkup()
-    ##file = open('./clip_image002.jpg', "rb")
-    bot.send_photo(message.chat.id, file, reply_markup=markup)
+    #file = open('./clip_image002.jpg', "rb")
+    #bot.send_photo(message.chat.id, file, reply_markup=markup)
 
 
 @bot.message_handler(commands=['help'])
