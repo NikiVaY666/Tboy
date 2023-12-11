@@ -12,6 +12,16 @@ def start(message):
     #file = open('./clip_image002.jpg', "rb")
     #bot.send_photo(message.chat.id, file, reply_markup=markup)
 
+@bot.message_handler(commands=['search'])
+    def search(message):
+        markup = types.InlineKeyboardMarkup()
+        bot.reply_to(message,'Выбери как искать')
+        markup.add(types.InlineKeyboardMarkup('Автор'))
+        markup.add(types.InlineKeyboardMarkup('Название'))
+        markup.add(types.InlineKeyboardMarkup('Журнал'))
+        markup.add(types.InlineKeyboardMarkup('Общее'))
+
+
 
 @bot.message_handler(commands=['help'])
 def hselpsp(message):
